@@ -1,0 +1,16 @@
+{
+  "name": "ghost-app-font-weaver",
+  "version": "0.0.1",
+  "dependencies": {
+    "fontmin": "^0.9.6",
+    "ghost-app": "0.0.3",
+    "gulp-rename": "^1.2.2"
+  },
+  "ghost": {
+    "permissions": {
+      "helpers": [
+        "fontweaver"
+      ]
+    }
+  }
+}
