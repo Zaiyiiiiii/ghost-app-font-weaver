@@ -27,10 +27,11 @@ fontWeaver = App.extend({
         let postMD5 = MD5(meta.data.root.post.updated_at)
         let filename = 
             meta.data.root.post.id + "-" + postMD5 + ".ttf";
-        let fontDist = path.resolve("./content/themes/casper/assets/fonts/");
-        let files = glob.sync(fontDist + "\\" + meta.data.root.post.id + "*")
-        let fileIndex = files.indexOf((fontDist + "\\" + filename).split("\\").join("/"))
-
+        let fontDist = path.resolve("./content/themes/casper/assets/fonts/")
+        //Windows平台的“ \ ”和Unix的“ / ” 。。。。现在用的是Unix的版本，我亲爱的Windows，T T
+        let files = glob.sync(fontDist + "/" + meta.data.root.post.id + "*")
+        let fileIndex = files.indexOf(fontDist + "/" + filename)
+        console.log(files, fileIndex)
         if (files.length == 1 && fileIndex != -1) {
             console.log("文件已经存在")
         }
