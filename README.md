@@ -10,7 +10,9 @@
      1.文件直接复制到/content/apps/font-weaver中。        
      2.在数据库的Setting表的active_apps和installed_apps对应的值里添加 ["font-weaver"]            
      3.在主题（代码里是默认的casper主题，暂时还没改路径）的post.hbs里面找个地方添加<style>{{fontweaver}}</style>，如果要修改其他的内容和主题自行修改文件里的路径及CSS。              
-     4.在路径中安装npm包。               
+     4.在路径中安装npm包。 
+     5.把字体放进
+     6.新版本不再使用root权限执行ghost，所以运行时偶尔会出现各种权限问题，自己用 ghost run 调试一下。
 
 说下目前很严重的几个问题  
 
